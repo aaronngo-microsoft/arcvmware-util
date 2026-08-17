@@ -7,8 +7,8 @@ $govcExe = Join-Path $tmpFolder "govc.exe"
 if((Test-Path -Path $govcExe) -eq $false)
 {
   Write-Host "Downloading govc..."
-  $govcZipPath = Join-Path $tmpFolder "govc_windows_amd64.exe.zip"
-  Invoke-WebRequest https://github.com/vmware/govmomi/releases/download/v0.34.2/govc_windows_amd64.zip -OutFile $govcZipPath
+  $govcZipPath = Join-Path $tmpFolder "govc_Windows_x86_64.zip"
+  Invoke-WebRequest https://github.com/vmware/govmomi/releases/download/v0.34.2/govc_Windows_x86_64.zip -OutFile $govcZipPath
   Expand-Archive -Force $govcZipPath -DestinationPath $tmpFolder
 }
 
